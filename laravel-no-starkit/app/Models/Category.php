@@ -8,5 +8,11 @@ class Category extends Model
 {
     //
 }
-class Category extends Model { protected $fillable = ['id', 'name', 'description', 'timestamps']; 
-    public $timestamps = true;}
+class Category extends Model 
+{ 
+    protected $fillable = ['id', 'name', 'description', 'timestamps']; 
+    public $timestamps = true;
+    public function post(){
+        return $this->hasMany(Post::class);
+    }
+}
