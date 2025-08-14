@@ -8,5 +8,5 @@ class Post extends Model
 {
     //
 }
-class Post extends Model { protected $fillable = ['title', 'content', 'category_id', 'user_id', 'timestamps']; 
+class Post extends Model { protected $fillable = ['id', 'title', 'content', 'category_id', 'user_id', 'timestamps']; 
     public $timestamps = true; }
