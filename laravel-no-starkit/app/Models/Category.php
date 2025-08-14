@@ -8,3 +8,4 @@ class Category extends Model
 {
     //
 }
+class Category extends Model { protected $fillable = ['id', 'name', 'description', 'timestamps']; }
