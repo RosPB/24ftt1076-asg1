@@ -4,13 +4,20 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Homepage</title>
+    @vite(['resources/css/app.css', 'resources/js/app.js'])
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body class="bg-orange-100 text-black-900">
+<body class="bg-green-100 text-black-900">
 <header class="bg-white shadow-md py-4">
     <div class="container mx-auto flex justify-between items-center px-6">
         <a href="/"><h1 class="text-xl font-bold", style= "color: purple;">HeyThere!</h1></a>
     </div>
+    <nav>
+        <ul class="flex space-x-4 justify-end px-6">
+            <li><a href="/" class="text-gray-700 hover:text-purple-500">Home</a></li>
+            <li><a href="/about" class="text-gray-700 hover:text-purple-500">About</a></li>
+            <li><a href="/messages" class="text-gray-700 hover:text-purple-500">Messages</a></li>
+        </ul>
 </header>
 <main class="container mx-auto mt-10 px-6 text-center">
     <h2 class="text-3xl font-bold", style= "color: #6053C9;">Leave a Message!</h2>
