@@ -13,6 +13,8 @@ Route::get('/second', function () {
 
 Route::view('/', 'home');
 
+Rouute::view('/second', 'home');
+
 Route::middleware(['auth'])->group(function () {
     Route::redirect('settings', 'settings/profile');
 
