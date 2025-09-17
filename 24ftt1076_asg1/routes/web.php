@@ -11,10 +11,6 @@ Route::get('/second', function () {
     return view('second');
 })->name('second');
 
-Route::view('dashboard', 'dashboard')
-    ->middleware(['auth', 'verified'])
-    ->name('dashboard');
-
 Route::view('/', 'home');
 
 Route::middleware(['auth'])->group(function () {
