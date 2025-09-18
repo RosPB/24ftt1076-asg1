@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use Illuminate\Support\Facades\DB;
 use Livewire\Volt\Volt;
 
 Route::get('/', function () {
@@ -11,7 +12,11 @@ Route::get('/second', function () {
     return view('second');
 })->name('second');
 
-Route::view('/', 'home');
+Route::view('/', 'home')->name('home');
+Route::get('/', function){
+    $messages = DB::table('messages')->get();
+    return view('home', ['messages' => $messages]);
+})->name('home');
 
 Route::view('/second', 'home');
 

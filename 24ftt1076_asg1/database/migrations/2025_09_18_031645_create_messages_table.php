@@ -18,6 +18,7 @@ return new class extends Migration
             $table->string('receiver');
             $table->text('content');
             $table->timestamps();
+            $messages = DB::table('messages')->get();
         });
     }
 
