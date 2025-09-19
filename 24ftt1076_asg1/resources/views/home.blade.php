@@ -23,6 +23,10 @@
 <main class="container mx-auto mt-10 px-6 text-center">
     <h2 class="text-3xl font-bold", style= "color: #6053C9;">Leave a Message!</h2>
     <p class="mt-4 text-lg text-gray-600">Add an anonymous note here, just a simple hi or hey will do.</p>
+    <img src="bruh.jpg" alt="Hand holding envelope" class="mx-auto mt-6 w-1/3 rounded-lg shadow-lg">
+    <div class="mt-6">
+        <a href="/messages/create" class="bg-purple-500 text-white px-4>py-2 rounded hover:bg-purple-600">Leave a Message</a>
+    </div>
 </main>
 </body>
 </html>
