@@ -14,7 +14,7 @@
         <nav>
             <ul class="flex space-x-4 justify-end px-6">
                 <li><a href="/" class="text-gray-700 hover:text-purple-500">Home</a></li>
-                <li><a href="/about" class="text-gray-700 hover:text-purple-500">About</a></li>
+                <li><a href="/about" class="text-gray-700 hover:text-purple-500">Dashboard</a></li>
                 <li><a href="/messages" class="text-gray-700 hover:text-purple-500">Messages</a></li>
             </ul>
         </nav>
