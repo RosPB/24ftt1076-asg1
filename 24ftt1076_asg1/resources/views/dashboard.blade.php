@@ -45,9 +45,9 @@
                             <tbody>
                                 @foreach($messages as $message)
                                     <tr class="hover:bg-gray-50">
-                                        <td class="py-2 px-4 border-b">{{ $message->recipient_name ?? 'Unknown Recipient' }}</td>
+                                        <td class="py-2 px-4 border-b">{{ $message->sender ?? 'Unknown Recipient' }}</td>
                                         <td class="py-2 px-4 border-b">{{ $message->content }}</td>
-                                        <td class="py-2 px-4 border-b text-xs text-gray-500">{{ $message->created_at->format('Y-m-d H:i') }}</td>
+                                        <td class="py-2 px-4 border-b text-xs text-gray-500">{{ $message->timestamp->format('Y-m-d H:i') }}</td>
                                     </tr>
                                 @endforeach
                             </tbody>

@@ -16,11 +16,10 @@ Route::get('/', function(){
 
 Route::view('/messages', 'messages');
 Route::post('/messages', function(){
-    $text = request('text');
+    $text = request('content');
     DB::table('messages')->insert([
-        'text' => $text,
-        'created_at' => now(),
-        'updated_at' => now(),
+        'content' => $text,
+        'timestamp' => now(),
     ]);
     return redirect('/messages');
 })->name('messages.store');
