@@ -2,10 +2,12 @@
 <html>
     <head>
         <meta charset="UTF-8">
-        <title>Create Message</title>
+        <title>Leave your message here!</title>
         </head>
-        <body>
-            <h1>Create a New Message</h1>
+        <body class="bg-blue-400 text-black-900">
+            <header class="bg-white shadow-md py-4">
+                <div class="container mx-auto flex justify-between items-center px-6">
+                    <a href="/"><h2 class="text-xl font-bold", style= "color: purple;">Add your text...</h1></a>
             <form action="{{ route('messages.store') }}" method="POST">
                 @csrf
                 <label for="title">Title:</label>

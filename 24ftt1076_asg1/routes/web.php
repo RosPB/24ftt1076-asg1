@@ -8,17 +8,24 @@ Route::get('/', function () {
     return view('welcome');
 })->name('home');
 
-Route::get('/second', function () {
-    return view('second');
-})->name('second');
-
 Route::view('/', 'home')->name('home');
 Route::get('/', function(){
     $messages = DB::table('messages')->get();
     return view('home', ['messages' => $messages]);
 })->name('home');
 
-Route::view('/second', 'home');
+Route::view('/messages', 'messages');
+Route::post('/messages', function(){
+    $text = request('text');
+    DB::table('messages')->insert([
+        'text' => $text,
+        'created_at' => now(),
+        'updated_at' => now(),
+    ]);
+    return redirect('/messages');
+})->name('messages.store');
+
+Route::view('/about', 'about');
 
 Route::middleware(['auth'])->group(function () {
     Route::redirect('settings', 'settings/profile');
