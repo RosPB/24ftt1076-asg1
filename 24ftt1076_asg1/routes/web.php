@@ -25,7 +25,7 @@ Route::post('/messages', function(){
     return redirect('/messages');
 })->name('messages.store');
 
-Route::view('/about', 'about');
+Route::view('/dashboard', 'about');
 
 Route::middleware(['auth'])->group(function () {
     Route::redirect('settings', 'settings/profile');
